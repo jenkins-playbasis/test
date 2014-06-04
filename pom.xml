@@ -10,4 +10,21 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
+    <scm>
+        <connection>scm:git:git@github.com:jenkins-playbasis/test.git</connection>
+    </scm>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-scm-plugin</artifactId>
+                <version>1.9</version>
+                <configuration>
+                    <tag>${project.artifactId}-${project.version}</tag>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>
